@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <h1>Add Teacher</h1>
+    <%- include('header') %>
+    <br>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <form action="/add" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="classes">Number of Classes:</label>
+        <input type="number" id="classes" name="classes" required min="0" max="100">
+        
+        <label for="day">Day of Birth:</label>
+        <input type="number" id="day" name="day" required min="1" max="31">
+
+        <label for="month">Month of Birth:</label>
+        <input type="number" id="month" name="month" required min="1" max="12">
+
+        <label for="year">Year of Birth:</label>
+        <input type="number" id="year" name="year" required min="1924" max="2025">
+
+        <button type="submit">Add Teacher</button>
+    </form>
+</body>
+</html>
